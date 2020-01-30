@@ -1,5 +1,6 @@
 export * from "./locales/interfaces/values";
 export {
     SuiLocalizationModule,
-    SuiLocalizationService
+    SuiLocalizationService,
+    IDatepickerLocaleValues
 } from "./internal";
