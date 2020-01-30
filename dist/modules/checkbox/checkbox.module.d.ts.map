@@ -1,0 +1,1 @@
+{"version":3,"file":"checkbox.module.d.ts","sources":["/home/jenya/Projects/ng2-semantic-ui/dist/modules/checkbox/checkbox.module.d.ts"],"sourcesContent":["export declare class SuiCheckboxModule {\n}\n"],"names":[],"mappings":";;;;;;AAAA;;;AACA;"}

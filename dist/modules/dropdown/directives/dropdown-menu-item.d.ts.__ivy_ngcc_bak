@@ -1,0 +1,14 @@
+import { ElementRef, Renderer2 } from "@angular/core";
+export declare class SuiDropdownMenuItem {
+    private _renderer;
+    element: ElementRef;
+    get isDisabled(): boolean;
+    private _isSelected;
+    get isSelected(): boolean;
+    set isSelected(value: boolean);
+    selectedClass: string;
+    childDropdownMenu: any;
+    get hasChildDropdown(): boolean;
+    constructor(_renderer: Renderer2, element: ElementRef);
+    performClick(): void;
+}

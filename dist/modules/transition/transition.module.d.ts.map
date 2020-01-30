@@ -1,0 +1,1 @@
+{"version":3,"file":"transition.module.d.ts","sources":["/home/jenya/Projects/ng2-semantic-ui/dist/modules/transition/transition.module.d.ts"],"sourcesContent":["export declare class SuiTransitionModule {\n}\n"],"names":[],"mappings":";;;AAAA;;;AACA;"}
