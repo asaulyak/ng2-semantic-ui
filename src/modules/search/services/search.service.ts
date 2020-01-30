@@ -174,8 +174,12 @@ export class SearchService<T, U> {
     public initialLookup(initial:U[]):LookupFnResult<T[]>;
     // tslint:disable-next-line:promise-function-async
     public initialLookup(initial:U | U[]):LookupFnResult<T> | LookupFnResult<T[]> {
+        if (!this._optionsLookup) {
+            return Promise.resolve([]);
+        }
+
         if (initial instanceof Array) {
-            return (this._optionsLookup as LookupFn<T, U[]>)(undefined, initial) as LookupFnResult<T[]>;
+            return this._optionsLookup(undefined, initial) as LookupFnResult<T[]>;
         }
         return (this._optionsLookup as LookupFn<T, U>)(undefined, initial) as LookupFnResult<T>;
     }

@@ -35,24 +35,31 @@ function buildLocalizeFn(values:IDateFnsLocaleValues,
 
     return (dirtyIndex:number, { type } = { type: defaultType }) => {
         const index = indexCallback ? indexCallback(dirtyIndex) : dirtyIndex;
-        return values[type][index];
+        return type ? values[type][index] : "";
     };
 }
 
 function buildLocalizeArrayFn(values:IDateFnsLocaleValues, defaultType:string):DateFnsHelper<IDateFnsHelperOptions, string[]> {
-    return ({ type } = { type: defaultType }) => values[type];
+    return ({ type } = { type: defaultType }) => type ? values[type] : [];
 }
 
 function buildMatchFn(patterns:IDateFnsLocaleValues, defaultType:string):DateFnsHelper<string, RegExpMatchArray | null> {
-    return (dirtyString, { type } = { type: defaultType }) =>
-        dirtyString.match(`^(${patterns[type].join("|")})`);
+    return (dirtyString, { type } = { type: defaultType }) => {
+        if (type) {
+            return dirtyString.match(`^(${patterns[type].join("|")})`);
+        }
+
+        // tslint:disable-next-line:no-null-keyword
+        return null;
+    };
 }
 
 function buildParseFn(patterns:IDateFnsLocaleValues, defaultType:string):DateFnsHelper<RegExpMatchArray, number> {
     return ([, result], { type } = { type: defaultType }) =>
-        (patterns[type] || patterns[defaultType])
+        type ? (patterns[type] || patterns[defaultType])
             .map(p => new RegExp(`^${p}`))
-            .findIndex(pattern => pattern.test(result));
+            .findIndex(pattern => pattern.test(result))
+        : -1;
 }
 
 export class DateFnsParser {
