@@ -2,14 +2,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "downlevelIteration": true,
+    "importHelpers": true,
     "outDir": "temp",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -20,7 +22,7 @@
     "paths": {
       "ng2-semantic-ui": ["dist"],
       "ng2-semantic-ui/locales": ["dist/locales"],
-      "ng2-semantic-ui/*": ["dist/*"],
+      "ng2-semantic-ui/*": ["dist/*"]
     }
   }
 }

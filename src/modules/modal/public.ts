@@ -1,7 +1,7 @@
 export {
     SuiModalModule,
     SuiModalService,
-    Modal as SuiModal,
+    Modal,
     ModalResult,
     ModalControls,
     ActiveModal as SuiActiveModal,
@@ -9,5 +9,6 @@ export {
     TemplateModalConfig,
     ComponentModalConfig,
     ModalTemplate,
-    ModalSize
+    ModalSize,
+    SuiModal
 } from "./internal";

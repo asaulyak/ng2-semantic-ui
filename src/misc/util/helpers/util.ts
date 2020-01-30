@@ -42,10 +42,10 @@ export const Util = {
             }
             return groups;
         },
-        groupBy<T>(items:T[], field:keyof T):{ [name:string]:T[] } {
+        groupBy<T extends Object>(items:T[], field:keyof T):{ [name:string]:T[] } {
             return items.reduce<{ [name:string]:T[] }>(
-                (groups, i) => {
-                    const fieldValue = i[field].toString();
+                (groups, i:T) => {
+                    const fieldValue = (i[field] as Object).toString();
                     groups[fieldValue] = groups[fieldValue] || [];
                     groups[fieldValue].push(i);
                     return groups;

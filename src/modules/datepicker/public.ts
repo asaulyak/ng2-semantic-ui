@@ -1,4 +1,8 @@
 export {
     SuiDatepickerModule,
-    DatepickerMode
+    DatepickerMode,
+    SuiDatepickerDirectiveValidator,
+    SuiDatepickerInputDirective,
+    SuiDatepickerDirective,
+    SuiDatepickerDirectiveValueAccessor
 } from "./internal";
