@@ -38,7 +38,7 @@ export class SuiDropdownMenuItem {
     public selectedClass:string;
 
     @ContentChild(forwardRef(() => SuiDropdownMenu), { static: true })
-    public childDropdownMenu:SuiDropdownMenu;
+    public childDropdownMenu:any; // Actually type is SuiDropdownMenu
 
     public get hasChildDropdown():boolean {
         return !!this.childDropdownMenu;
