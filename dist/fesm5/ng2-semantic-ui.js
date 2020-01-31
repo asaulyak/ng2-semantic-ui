@@ -8984,8 +8984,8 @@ var SuiTabset = /** @class */ (function () {
     };
     SuiTabset.ɵfac = function SuiTabset_Factory(t) { return new (t || SuiTabset)(); };
     SuiTabset.ɵcmp = ɵɵdefineComponent({ type: SuiTabset, selectors: [["sui-tabset"]], contentQueries: function SuiTabset_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
-            ɵɵcontentQuery(dirIndex, SuiTabHeader, false);
-            ɵɵcontentQuery(dirIndex, SuiTabContent, false);
+            ɵɵcontentQuery(dirIndex, SuiTabHeader, true);
+            ɵɵcontentQuery(dirIndex, SuiTabContent, true);
         } if (rf & 2) {
             var _t;
             ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._tabHeaders = _t);
@@ -9004,10 +9004,10 @@ var SuiTabset = /** @class */ (function () {
             }]
     }], function () { return []; }, { _tabHeaders: [{
             type: ContentChildren,
-            args: [SuiTabHeader]
+            args: [SuiTabHeader, { descendants: true }]
         }], _tabContents: [{
             type: ContentChildren,
-            args: [SuiTabContent]
+            args: [SuiTabContent, { descendants: true }]
         }] }); })();
 
 var SuiTabsModule = /** @class */ (function () {
