@@ -11,6 +11,15 @@
     "popper.js"
   ],
   "lib": {
-    "entryFile": "public.ts"
+    "entryFile": "public.ts",
+      "umdModuleIds": {
+          "bowser": "bowser",
+          "date-fns": "date-fns",
+          "date-fns/locale/en-US": "date-fns",
+          "element-closest": "element-closest",
+          "extend": "extend",
+          "is-ua-webview": "is-ua-webview",
+          "popper.js": "popper.js"
+      }
   }
 }
