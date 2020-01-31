@@ -37,7 +37,8 @@
     "lint": "npm run lib:lint && npm run demo:lint",
     "test": "npm run lib:test",
     "build": "npm run lib:build && npm run demo:build",
-    "build:prod": "npm run lib:build:prod && npm run demo:build:prod"
+    "build:prod": "npm run lib:build:prod && npm run demo:build:prod",
+      "prepare": "npm run lib:compile"
   },
   "dependencies": {
     "tslib": "^1.10.0"
