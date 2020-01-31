@@ -5,6 +5,7 @@ export {
     ModalResult,
     ModalControls,
     ActiveModal as SuiActiveModal,
+    ActiveModal,
     ModalConfig,
     TemplateModalConfig,
     ComponentModalConfig,

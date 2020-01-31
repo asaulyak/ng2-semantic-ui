@@ -1,0 +1,34 @@
+import { OnChanges, EventEmitter } from "@angular/core";
+import * as i0 from "@angular/core";
+export declare class SuiPagination implements OnChanges {
+    readonly hasClasses: boolean;
+    pageCount: number;
+    pageChange: EventEmitter<number>;
+    private _maxSize?;
+    private _collectionSize;
+    private _page;
+    private _pages;
+    private _hasNavigationLinks;
+    get maxSize(): number | undefined;
+    set maxSize(value: number | undefined);
+    pageSize: number;
+    get collectionSize(): number;
+    set collectionSize(value: number);
+    get hasNavigationLinks(): boolean;
+    set hasNavigationLinks(value: boolean);
+    hasBoundaryLinks: boolean;
+    canRotate: boolean;
+    hasEllipses: boolean;
+    get page(): number;
+    set page(value: number);
+    get pages(): number[];
+    constructor();
+    hasPrevious(): boolean;
+    hasNext(): boolean;
+    setPage(newPage: number): void;
+    ngOnChanges(): void;
+    private updatePages;
+    private applyPagination;
+    static ɵfac: i0.ɵɵFactoryDef<SuiPagination>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SuiPagination, "sui-pagination", never, { "maxSize": "maxSize"; "pageSize": "pageSize"; "collectionSize": "collectionSize"; "hasNavigationLinks": "hasNavigationLinks"; "hasBoundaryLinks": "hasBoundaryLinks"; "canRotate": "canRotate"; "hasEllipses": "hasEllipses"; "page": "page"; }, { "pageChange": "pageChange"; }, never>;
+}

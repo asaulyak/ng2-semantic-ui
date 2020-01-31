@@ -33,15 +33,15 @@ testem.log
 Thumbs.db
 
 # non TS files
-*.d.ts
-*.metadata.json
-*.js
-*.js.map
-!*.conf.js
+#*.d.ts
+#*.metadata.json
+#*.js
+#*.js.map
+#!*.conf.js
 
 # build scripts
-!scripts/**/*
-!package.js
+#!scripts/**/*
+#!package.js
 
 # output files
 demo/dist

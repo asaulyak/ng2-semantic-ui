@@ -9,7 +9,7 @@ export {
     SuiPopupDirective,
     SuiPopup,
     SuiPopupTemplateController,
-    PopupConfig
+    PopupConfig,
 } from "./internal";
 
 import { PositioningPlacement } from "../../misc/util/internal";
