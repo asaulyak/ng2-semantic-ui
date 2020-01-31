@@ -41,7 +41,6 @@
     "prepare": "npm run lib:compile"
   },
   "dependencies": {
-    "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.900.0-rc.12",
@@ -86,6 +85,7 @@
     "prismjs": "~1.6.0",
     "rxjs": "^6.5.4",
     "ts-node": "~5.0.1",
+      "tslib": "^1.10.0",
     "tslint": "~5.9.1",
     "typescript": "^3.7.5",
     "web-animations-js": "^2.3.2",

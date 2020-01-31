@@ -62,7 +62,7 @@ export abstract class SuiSelectBase<T, U> implements AfterContentInit, OnDestroy
     @ViewChild(SuiSelectSearch, { static: true })
     private _internalSearch?:SuiSelectSearch;
 
-    @ContentChild(SuiSelectSearch, /* TODO: add static flag */ {})
+    @ContentChild(SuiSelectSearch, { static: true })
     private _manualSearch?:SuiSelectSearch;
 
     public get searchInput():SuiSelectSearch | undefined {
